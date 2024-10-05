@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="Группа3" id="11">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<UsualGroup name="Группа4" id="15">
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="5">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="6"/>
+							<ChildItems>
+								<Button name="Константы" id="1">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.Константы</CommandName>
+									<ExtendedTooltip name="КонстантыРасширеннаяПодсказка" id="2"/>
+								</Button>
+								<Button name="НачатьОбучение" id="3">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.НачатьТест</CommandName>
+									<TextColor>#AE3993</TextColor>
+									<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начать обучение</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="НачатьОбучениеРасширеннаяПодсказка" id="4"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа2" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ВОПРОСЫ</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>#00CCFF</TitleTextColor>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<Button name="ВыбранныеВопросы" id="9">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВыбранныеВопросы</CommandName>
+							<TextColor>#008080</TextColor>
+							<ExtendedTooltip name="ВыбранныеВопросыРасширеннаяПодсказка" id="10"/>
+						</Button>
+						<Button name="РаботаНадОшибками" id="13">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.РаботаНадОшибками</CommandName>
+							<TextColor>#008080</TextColor>
+							<ExtendedTooltip name="РаботаНадОшибкамиРасширеннаяПодсказка" id="14"/>
+						</Button>
+						<Button name="ВопросыДляТаста" id="17">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВопросыДляТаста</CommandName>
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<ExtendedTooltip name="ВопросыДляТастаРасширеннаяПодсказка" id="18"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа5" id="19">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<Button name="РезультатыТеста" id="21">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.РезультатыТеста</CommandName>
+					<TextColor>#008000</TextColor>
+					<ExtendedTooltip name="РезультатыТестаРасширеннаяПодсказка" id="22"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанельФункций</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="График" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Константы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Константы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Константы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Константы</Action>
+		</Command>
+		<Command name="НачатьТест" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать тест</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать тест</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НачатьТест</Action>
+		</Command>
+		<Command name="ВыбранныеВопросы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные вопросы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные вопросы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбранныеВопросы</Action>
+		</Command>
+		<Command name="РаботаНадОшибками" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа над ошибками</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа над ошибками</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаботаНадОшибками</Action>
+		</Command>
+		<Command name="ВопросыДляТаста" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопросы для таста</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопросы для таста</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВопросыДляТаста</Action>
+		</Command>
+		<Command name="РезультатыТеста" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результаты теста</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результаты теста</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РезультатыТеста</Action>
+		</Command>
+	</Commands>
+</Form>

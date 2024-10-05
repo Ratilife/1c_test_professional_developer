@@ -1,0 +1,941 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаВыборВидаТестирования" id="85">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбор вида тестирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбор вида тестирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВыборВидаТестированияРасширеннаяПодсказка" id="86"/>
+			<ChildItems>
+				<InputField name="ВидТестирования" id="1">
+					<DataPath>Объект.ВидТестирования</DataPath>
+					<ContextMenu name="ВидТестированияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ВидТестированияРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ВидТестированияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РандомноКоличествоВопросов" id="87">
+					<DataPath>РандомноКоличествоВопросов</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>количество вопросов</v8:content>
+						</v8:item>
+					</Title>
+					<Width>2</Width>
+					<ContextMenu name="РандомноКоличествоВопросовКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="РандомноКоличествоВопросовРасширеннаяПодсказка" id="89"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаГлава" id="123">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа глава</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа глава</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГлаваРасширеннаяПодсказка" id="124"/>
+			<ChildItems>
+				<InputField name="Глава" id="4">
+					<DataPath>Объект.Глава</DataPath>
+					<ContextMenu name="ГлаваКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ГлаваРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<CheckBoxField name="УчитыватьГлаву" id="125">
+					<DataPath>УчитыватьГлаву</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УчитыватьГлавуКонтекстноеМеню" id="126"/>
+					<ExtendedTooltip name="УчитыватьГлавуРасширеннаяПодсказка" id="127"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбъединение" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа объединение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа объединение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбъединениеРасширеннаяПодсказка" id="65"/>
+			<ChildItems>
+				<Button name="ЗагрузитьВопросы" id="26">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗагрузитьВопросы</CommandName>
+					<BackColor>#CCFFFF</BackColor>
+					<ExtendedTooltip name="ЗагрузитьВопросыРасширеннаяПодсказка" id="27"/>
+				</Button>
+				<UsualGroup name="ГруппаСчетчики" id="62">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа счетчики</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа счетчики</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#FFFFFF</BackColor>
+					<ExtendedTooltip name="ГруппаСчетчикиРасширеннаяПодсказка" id="63"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСчетчикВопрос" id="75">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа счетчик вопрос</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа счетчик вопрос</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСчетчикВопросРасширеннаяПодсказка" id="76"/>
+							<ChildItems>
+								<LabelField name="КоличествоВопросовВсего" id="66">
+									<DataPath>КоличествоВопросовВсего</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вопросов всего</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>#0000FF</TitleTextColor>
+									<TextColor>#0000FF</TextColor>
+									<ContextMenu name="КоличествоВопросовВсегоКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="КоличествоВопросовВсегоРасширеннаяПодсказка" id="68"/>
+								</LabelField>
+								<LabelField name="ОсталосьОтветитьНаВопросы" id="69">
+									<DataPath>ОсталосьОтветитьНаВопросы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Осталось ответить</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>#3366FF</TitleTextColor>
+									<TextColor>#3366FF</TextColor>
+									<ContextMenu name="ОсталосьОтветитьНаВопросыКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ОсталосьОтветитьНаВопросыРасширеннаяПодсказка" id="71"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСчетчикОтветы" id="80">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа счетчик ответы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа счетчик ответы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСчетчикОтветыРасширеннаяПодсказка" id="81"/>
+							<ChildItems>
+								<LabelField name="КоличествоОтветовПравельно" id="72">
+									<DataPath>КоличествоОтветовПравельно</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Правельно</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>#339966</TitleTextColor>
+									<TextColor>#339966</TextColor>
+									<ContextMenu name="КоличествоОтветовПравельноКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="КоличествоОтветовПравельноРасширеннаяПодсказка" id="74"/>
+								</LabelField>
+								<LabelField name="КоличествоОтветовНеправельно" id="82">
+									<DataPath>КоличествоОтветовНеправельно</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Неправельно</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>#FF0000</TitleTextColor>
+									<TextColor>#FF0000</TextColor>
+									<ContextMenu name="КоличествоОтветовНеправельноКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="КоличествоОтветовНеправельноРасширеннаяПодсказка" id="84"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСекундомеры" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа секундомеры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа секундомеры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСекундомерыРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="110">
+							<TextColor>#800000</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общее:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="112"/>
+						</LabelDecoration>
+						<LabelDecoration name="ТаймерВыводОбщий" id="104">
+							<TextColor>#800000</TextColor>
+							<Font height="14" kind="AutoFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>00:00</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТаймерВыводОбщийКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="ТаймерВыводОбщийРасширеннаяПодсказка" id="106"/>
+						</LabelDecoration>
+						<LabelDecoration name="ТаймерОбщий" id="98">
+							<Visible>false</Visible>
+							<ContextMenu name="ТаймерОбщийКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="ТаймерОбщийРасширеннаяПодсказка" id="100"/>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация2" id="113">
+							<TextColor>#008080</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вопрос:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="114"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="115"/>
+						</LabelDecoration>
+						<LabelDecoration name="ТаймерВыводВопрос" id="107">
+							<TextColor>#008080</TextColor>
+							<Font height="14" kind="AutoFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>00:00</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТаймерВыводВопросКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="ТаймерВыводВопросРасширеннаяПодсказка" id="109"/>
+						</LabelDecoration>
+						<LabelDecoration name="ТаймерВопрос" id="101">
+							<Visible>false</Visible>
+							<ContextMenu name="ТаймерВопросКонтекстноеМеню" id="102"/>
+							<ExtendedTooltip name="ТаймерВопросРасширеннаяПодсказка" id="103"/>
+						</LabelDecoration>
+						<Button name="Пауза" id="121">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Пауза</CommandName>
+							<TextColor>#FF0000</TextColor>
+							<BackColor>#6EE9FF</BackColor>
+							<ExtendedTooltip name="ПаузаРасширеннаяПодсказка" id="122"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСообщение" id="116">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сообщение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сообщение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСообщениеРасширеннаяПодсказка" id="117"/>
+					<ChildItems>
+						<LabelField name="СообщениеОКоличествеВопросов" id="118">
+							<DataPath>СообщениеОКоличествеВопросов</DataPath>
+							<Visible>false</Visible>
+							<TitleLocation>None</TitleLocation>
+							<TextColor>#800000</TextColor>
+							<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="СообщениеОКоличествеВопросовКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="СообщениеОКоличествеВопросовРасширеннаяПодсказка" id="120"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<TextDocumentField name="Вопрос" id="23" DisplayImportance="High">
+			<DataPath>Объект.Вопрос</DataPath>
+			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+			<Height>5</Height>
+			<TextColor>style:FormTextColor</TextColor>
+			<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ContextMenu name="ВопросКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ВопросРасширеннаяПодсказка" id="25"/>
+		</TextDocumentField>
+		<UsualGroup name="ГруппаКнопкиВнизу" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки внизу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки внизу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиВнизуРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<Button name="Следующий" id="28">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Следующий</CommandName>
+					<BackColor>#CCFFCC</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Следующий &gt;&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СледующийРасширеннаяПодсказка" id="29"/>
+				</Button>
+				<Button name="Проверить" id="58">
+					<Type>UsualButton</Type>
+					<Visible>false</Visible>
+					<Enabled>false</Enabled>
+					<CommandName>Form.Command.Проверить</CommandName>
+					<BackColor>#CCFFCC</BackColor>
+					<ExtendedTooltip name="ПроверитьРасширеннаяПодсказка" id="59"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<PictureField name="КартинкаВопроса" id="55">
+			<DataPath>КартинкаВопроса</DataPath>
+			<ContextMenu name="КартинкаВопросаКонтекстноеМеню" id="56"/>
+			<ExtendedTooltip name="КартинкаВопросаРасширеннаяПодсказка" id="57"/>
+		</PictureField>
+		<Table name="ВариантыОтветов" id="30">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ВариантыОтветов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ВариантыОтветовКонтекстноеМеню" id="31"/>
+			<AutoCommandBar name="ВариантыОтветовКоманднаяПанель" id="32">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ВариантыОтветовРасширеннаяПодсказка" id="33"/>
+			<SearchStringAddition name="ВариантыОтветовСтрокаПоиска" id="34">
+				<AdditionSource>
+					<Item>ВариантыОтветов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыОтветовСтрокаПоискаКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="ВариантыОтветовСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ВариантыОтветовСостояниеПросмотра" id="37">
+				<AdditionSource>
+					<Item>ВариантыОтветов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыОтветовСостояниеПросмотраКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="ВариантыОтветовСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ВариантыОтветовУправлениеПоиском" id="40">
+				<AdditionSource>
+					<Item>ВариантыОтветов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыОтветовУправлениеПоискомКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="ВариантыОтветовУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ВариантыОтветовНомерСтроки" id="43">
+					<DataPath>Объект.ВариантыОтветов.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВариантыОтветовНомерСтрокиКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ВариантыОтветовНомерСтрокиРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<CheckBoxField name="ВариантыОтветовВыбор" id="46">
+					<DataPath>Объект.ВариантыОтветов.Выбор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВариантыОтветовВыборКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ВариантыОтветовВыборРасширеннаяПодсказка" id="48"/>
+					<Events>
+						<Event name="OnChange">ВариантыОтветовВыборПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ВариантыОтветовПравельныйОтвет" id="90">
+					<DataPath>Объект.ВариантыОтветов.ПравельныйОтвет</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВариантыОтветовПравельныйОтветКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ВариантыОтветовПравельныйОтветРасширеннаяПодсказка" id="92"/>
+				</CheckBoxField>
+				<InputField name="ВариантыОтветовВариант" id="49">
+					<DataPath>Объект.ВариантыОтветов.Вариант</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВариантыОтветовВариантКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ВариантыОтветовВариантРасширеннаяПодсказка" id="51"/>
+				</InputField>
+				<CheckBoxField name="ВариантыОтветовПравельно" id="52">
+					<DataPath>Объект.ВариантыОтветов.Правельно</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВариантыОтветовПравельноКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ВариантыОтветовПравельноРасширеннаяПодсказка" id="54"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВариантыОтветовДополнительныеОтметки" id="93">
+					<DataPath>Объект.ВариантыОтветов.ДополнительныеОтметки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВариантыОтветовДополнительныеОтметкиКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="ВариантыОтветовДополнительныеОтметкиРасширеннаяПодсказка" id="95"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ТестПроверка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.ВариантыОтветов"/>
+			</Columns>
+		</Attribute>
+		<Attribute name="КартинкаВопроса" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинка вопроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОтветовПравельно" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ответов правельно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОтветовНеправельно" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ответов неправельно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоВопросовВсего" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество вопросов всего</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОсталосьОтветитьНаВопросы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось ответить на вопросы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РандомноКоличествоВопросов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рандомно количество вопросов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Вопросы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопросы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Вопрос" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вопрос</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВопросыТест</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВариантыОтветов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Варианты ответов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ответ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПравельныйОтвет" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правельный ответ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДополнительныеОтметки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные отметки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Вопрос" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вопрос</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НеправельныеОтветы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неправельные ответы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Вопрос" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вопрос</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПравельныйОтвет" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правельный ответ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ответ" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СообщениеОКоличествеВопросов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение о количестве вопросов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МенятьТекстКнопки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менять текст кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="УчитыватьГлаву" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать главу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВариантыОтветовВариант</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВариантыОтветов.Выбор</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВариантыОтветов.ПравельныйОтвет</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#339966</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВариантыОтветовВариант</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВариантыОтветов.Выбор</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВариантыОтветов.ПравельныйОтвет</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВариантыОтветовВариант</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВариантыОтветов.ДополнительныеОтметки</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#0000FF</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВариантыОтветовВариант</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВариантыОтветов.Выбор</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВариантыОтветов.ДополнительныеОтметки</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВариантыОтветов.ПравельныйОтвет</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВариантыОтветов.Выбор</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#0000FF</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Следующий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Следующий</Action>
+		</Command>
+		<Command name="ЗагрузитьВопросы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить вопросы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить вопросы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьВопросы</Action>
+		</Command>
+		<Command name="Проверить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Проверить</Action>
+		</Command>
+		<Command name="Пауза" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пауза</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пауза</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Пауза</Action>
+		</Command>
+	</Commands>
+</Form>
