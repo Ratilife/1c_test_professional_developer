@@ -5,6 +5,9 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="Группа3" id="11">
 			<Representation>None</Representation>
@@ -64,27 +67,144 @@
 							<TextColor>#008080</TextColor>
 							<ExtendedTooltip name="РаботаНадОшибкамиРасширеннаяПодсказка" id="14"/>
 						</Button>
-						<Button name="ВопросыДляТаста" id="17">
+						<UsualGroup name="Группа9" id="43">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="44"/>
+							<ChildItems>
+								<Button name="ВопросыДляТеста" id="17">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ВопросыДляТаста</CommandName>
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<ExtendedTooltip name="ВопросыДляТестаРасширеннаяПодсказка" id="18"/>
+								</Button>
+								<LabelField name="ВсегоВопросов" id="45">
+									<DataPath>ВсегоВопросов</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<ContextMenu name="ВсегоВопросовКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ВсегоВопросовРасширеннаяПодсказка" id="47"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа5" id="19">
+					<Representation>None</Representation>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<Button name="РезультатыТеста" id="21">
 							<Type>Hyperlink</Type>
-							<CommandName>Form.Command.ВопросыДляТаста</CommandName>
-							<TextColor>style:FieldSelectionBackColor</TextColor>
-							<ExtendedTooltip name="ВопросыДляТастаРасширеннаяПодсказка" id="18"/>
+							<CommandName>Form.Command.РезультатыТеста</CommandName>
+							<TextColor>#008000</TextColor>
+							<ExtendedTooltip name="РезультатыТестаРасширеннаяПодсказка" id="22"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="Группа5" id="19">
+		<UsualGroup name="Группа6" id="29">
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="20"/>
+			<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="30"/>
 			<ChildItems>
-				<Button name="РезультатыТеста" id="21">
-					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.РезультатыТеста</CommandName>
-					<TextColor>#008000</TextColor>
-					<ExtendedTooltip name="РезультатыТестаРасширеннаяПодсказка" id="22"/>
-				</Button>
+				<UsualGroup name="ГруппаПроверка" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>#008080</TitleTextColor>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа проверка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПроверкаРасширеннаяПодсказка" id="24"/>
+					<ChildItems>
+						<Button name="Проверка" id="31">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.Проверка</CommandName>
+							<TextColor>#993366</TextColor>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="ПроверкаРасширеннаяПодсказка" id="32"/>
+						</Button>
+						<UsualGroup name="Группа8" id="38">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="39"/>
+							<ChildItems>
+								<Button name="НеправельныеОтветы" id="25">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.НеправельныеОтветы</CommandName>
+									<TextColor>#FF6600</TextColor>
+									<ExtendedTooltip name="НеправельныеОтветыРасширеннаяПодсказка" id="26"/>
+								</Button>
+								<LabelField name="НеправельныеОтветыВсего" id="40">
+									<DataPath>НеправельныеОтветыВсего</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<TextColor>#FF6600</TextColor>
+									<ContextMenu name="НеправельныеОтветыВсегоКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="НеправельныеОтветыВсегоРасширеннаяПодсказка" id="42"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа7" id="33">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<Button name="ПравельныеОтветы" id="27">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ПравельныеОтветы</CommandName>
+									<TextColor>#800080</TextColor>
+									<ExtendedTooltip name="ПравельныеОтветыРасширеннаяПодсказка" id="28"/>
+								</Button>
+								<LabelField name="ПравельныеОтветыВсего" id="35">
+									<DataPath>ПравельныеОтветыВсего</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<TextColor>#800080</TextColor>
+									<ContextMenu name="ПравельныеОтветыВсегоКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ПравельныеОтветыВсегоРасширеннаяПодсказка" id="37"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelField name="ПройденоВопросовВсего" id="56">
+							<DataPath>ПройденоВопросовВсего</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пройдено вопросов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>#473BC2</TitleTextColor>
+							<TextColor>#473BC2</TextColor>
+							<ContextMenu name="ПройденоВопросовВсегоКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ПройденоВопросовВсегоРасширеннаяПодсказка" id="58"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа10" id="48">
+			<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<LabelField name="ПройденоТестов" id="53">
+					<DataPath>ПройденоТестов</DataPath>
+					<TitleTextColor>#008080</TitleTextColor>
+					<TextColor>#008080</TextColor>
+					<ContextMenu name="ПройденоТестовКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ПройденоТестовРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<LabelField name="ОсталосьВопросов" id="50">
+					<DataPath>ОсталосьВопросов</DataPath>
+					<TitleTextColor>style:AccentColor</TitleTextColor>
+					<TextColor>style:AccentColor</TextColor>
+					<ContextMenu name="ОсталосьВопросовКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ОсталосьВопросовРасширеннаяПодсказка" id="52"/>
+				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -108,6 +228,102 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПравельныеОтветыВсего" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правельные ответы всего</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НеправельныеОтветыВсего" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неправельные ответы всего</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсегоВопросов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего вопросов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПройденоТестов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пройдено тестов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОсталосьВопросов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось вопросов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПройденоВопросовВсего" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пройдено вопросов всего</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
@@ -201,6 +417,51 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РезультатыТеста</Action>
+		</Command>
+		<Command name="ПравельныеОтветы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правельные ответы (После проверки)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правельные ответы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПравельныеОтветы</Action>
+		</Command>
+		<Command name="НеправельныеОтветы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неправельные ответы (после проверки)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неправельные ответы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НеправельныеОтветы</Action>
+		</Command>
+		<Command name="Проверка" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка (тест)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Проверка</Action>
 		</Command>
 	</Commands>
 </Form>

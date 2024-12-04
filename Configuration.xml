@@ -251,8 +251,10 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<CommonModule>ОформлениеПолей</CommonModule>
+			<CommonModule>ОбщееСервер</CommonModule>
 			<Constant>Счетчик</Constant>
 			<Constant>УчитыватьСчетчик</Constant>
+			<Constant>Феерверк</Constant>
 			<CommonForm>ФормаКонстант</CommonForm>
 			<CommonForm>ФормаПоказатьКартинку</CommonForm>
 			<CommonForm>ФормаУвеличитьСчетчик</CommonForm>
@@ -265,6 +267,9 @@
 			<InformationRegister>РезультатТеста</InformationRegister>
 			<InformationRegister>НеправельныеОтветы</InformationRegister>
 			<InformationRegister>ВыбранныеВопросы</InformationRegister>
+			<InformationRegister>ПравельныеОтветы</InformationRegister>
+			<InformationRegister>НеПравельныеОтветыУчитьЗаново</InformationRegister>
+			<InformationRegister>ПодсчетПройденныхТестов</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

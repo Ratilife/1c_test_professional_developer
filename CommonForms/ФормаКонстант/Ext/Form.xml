@@ -26,6 +26,12 @@
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="Феерверк" id="9">
+			<DataPath>НаборКонстант.Феерверк</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ФеерверкКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ФеерверкРасширеннаяПодсказка" id="11"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="НаборКонстант" id="1">
